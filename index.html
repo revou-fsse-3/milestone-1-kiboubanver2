@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
   <script src="https://kit.fontawesome.com/141add2030.js" crossorigin="anonymous"></script>
+  <script></script>
   <title>Document</title>
 </head>
 
@@ -18,15 +19,164 @@
       <li class="nav-item">About Us</li>
       <li class="nav-item">Contact Us</li>
     </ul>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
+    
+    <div class="mobile-container">
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <div id="myLinks">
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </a>
   </nav>
 
-  <section class="banner"></section>
+  <section class="main">
+<div class="slideshow-container">
 
-  <section class="main"></section>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="assets/pic1.jpeg" style="width:100%">
+  <div class="text">Baked to Perfection, Delivered with Affection</div>
+</div>
 
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="assets/Pic2.jpeg" style="width:100%">
+  <div class="text">From Oven to Heart: Where Every Cookie Tells a Sweet Story</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="assets/pic3.jpeg" style="width:100%">
+  <div class="text">Sweet Dreams, Sweeter Bites: Our Cookies, Your Bliss</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+  </section>
+
+  <section class="gallery-container">
+
+      <h2 class="section-tittle1">Our Ingredients</h2>
+      
+      <div class="responsive">
+        <div class="gallery">
+            <img src="assets/sugar-cubes.webp" alt="Sugar" width="600" height="400">
+          <div class="desc">In the art of crafting the ideal sugar for our cookies, we start with the purest cane sweetness nature has to offer. </div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+            <img src="assets/Flour.jpeg" alt="Flour" width="600" height="400">
+          <div class="desc">Crafting the finest flour for baking our cookies begins with selecting the choicest grains from nature.</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+            <img src="assets/Honey-min-min.png" alt="Honey" width="600" height="400">
+          <div class="desc">In our pursuit of perfect sweetness for our cookies, we turn to nature's golden treasure—pure honey.</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+            <img src="assets/1920px-004-soymilk.jpg" alt="Soy Milk" width="600" height="400">
+          <div class="desc">We embrace the richness of plant-based perfection with our premium soy milk.</div>
+        </div>
+      </div>
+  </section>
+
+  <section class="about">
+    <h1>About Us</h1>
+    <p style="font-weight: bold">GeeksforGeeks is a leading platform...</p>
+    <div class="about-info">
+        <div class="about-img">
+            <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230824153359/
+371ba38b-8a03-4bff-916c-c3fa5396ceda.jfif" alt="Geeksforgeeks">
+        </div>
+        <div>
+ <p>GeeksforGeeks is a leading platform that provides computer science resources
+              and coding challenges for programmers and technology enthusiasts,
+              along with interview and exam preparations for upcoming aspirants.
+              With a strong emphasis on enhancing coding skills and knowledge,
+              it has become a trusted destination for over 12 million plus registered
+              users worldwide.</p>
+            <button>Read More...</button>
+        </div>
+    </div>
+</section>
+
+<section>
+  <h2>Form on Hero Image</h2>
+<div class="bg-img">
+  <form action="/action_page.php" class="container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+</section>
   <footer class="footer"></footer>
 </body>
 </html>
