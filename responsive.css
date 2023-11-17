@@ -17,6 +17,7 @@
     }
     .about-img img {
         object-fit: contain;
+    }
 }
 
 @media (min-width: 568px){
