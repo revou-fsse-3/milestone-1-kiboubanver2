@@ -6,6 +6,19 @@
     .nav-menu{
         display: none;
     }
+    .about-info{
+        display: block;
+    }
+    .about-img{
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 2rem;
+        width: 25rem;
+    }
+    .about-img img {
+        object-fit: contain;
+}
+
 }
 
 @media (min-width: 568px){
