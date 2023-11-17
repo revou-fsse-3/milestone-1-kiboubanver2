@@ -19,16 +19,8 @@
         object-fit: contain;
 }
 
-}
-
 @media (min-width: 568px){
-    .navbar a{
-        display: none;
-    }
-    .navbar a.icon{
-        display: none;
-    }
-    .mobile-container{
+    .dropdown{
         display: none;
     }
 }
